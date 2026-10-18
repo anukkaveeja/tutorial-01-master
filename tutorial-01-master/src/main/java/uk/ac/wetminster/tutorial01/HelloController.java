@@ -22,6 +22,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(){
+
         return "Hello from Spring Boots!";
     }
 
@@ -39,6 +40,7 @@ public class HelloController {
 
     @GetMapping("/goodbye")
     public String goodbye(){
+
         return "Goodbye from Spring Boot!";
     }
 }
