@@ -28,8 +28,16 @@ public class ProductService {
                 .filter(p -> p.getId().equals(id))
                 .findFirst();
     }
+    public void deleteProduct(Long id) {
+        products.removeIf(p -> p.getId().equals(id));
+    }
 
     public Long getNextId() {
         return nextId;
+    }
+    public java.util.List<Product> findByName(String name) {
+        return products.stream()
+                .filter(p -> p.getName().contains(name))
+                .toList();
     }
 }
